@@ -2,12 +2,14 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
+
+#include "Contact.hpp"
 #include <iostream>
 class PhoneBook
 {
-	std::string contat[8];
+	Contact contat[8];
 	public:
-		void set_new (std::string);
+		void set_new ();
 		void print_contact (int);
 };
 #endif
