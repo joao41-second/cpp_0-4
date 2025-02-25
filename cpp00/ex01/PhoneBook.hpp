@@ -3,8 +3,7 @@
 #define PHONEBOOK_HPP
 
 #include <iostream>
-
-class PhoneBook 
+class PhoneBook
 {
 	std::string contat[8];
 	public:

@@ -14,7 +14,7 @@ NAME = cpp00_ex0
 
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp PhoneBook.cpp
+SRC = main.cpp PhoneBook.cpp Contact.cpp
 SRCS = $(SRC:.cpp=.o)
 
 all: $(NAME)
