@@ -9,4 +9,5 @@ int main(void)
 	ok.print_contact(1);
 	Contact olas;
 	olas.set_new_contact();
+	olas.print_contact_line(1);
 }
