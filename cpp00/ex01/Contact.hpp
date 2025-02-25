@@ -6,7 +6,7 @@
 class Contact
 {
 	std::string first_name,last_name,nickname,darkest;
-	int phonenumber;
+	std::string phonenumber;
 	private:
 		std::string set_the_string(std::string);
 	public:

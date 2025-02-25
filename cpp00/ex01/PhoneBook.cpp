@@ -1,4 +1,7 @@
 #include "Contact.hpp"
+#include <cstdio>
+#include <iostream>
+#include <string>
 #include "PhoneBook.hpp"
 
 
@@ -14,6 +17,7 @@ void PhoneBook::set_new ()
 void PhoneBook::print_contact (int i)
 {
 	int e;
+	std::string nb;
 	e = -1;
 	if(i == -1)
 	{
@@ -22,6 +26,11 @@ void PhoneBook::print_contact (int i)
 			contat[e].print_contact_line(e);
 		}
 	}
+	std::getline(std::cin,nb);
+	if(std::stoi(nb) <= 8 && std::stoi(nb)> -1)
+		contat[std::stoi(nb)].print_contact();
+	else 
+		std::cout << "not number valid" << std::endl;
 }
 
 void::PhoneBook::chets()
@@ -29,6 +38,6 @@ void::PhoneBook::chets()
 	int i = -1;
 	while (i++ != 7)
 	{
-	 contat[i].sd_contact();	
+		contat[i].sd_contact();
 	}
 }
