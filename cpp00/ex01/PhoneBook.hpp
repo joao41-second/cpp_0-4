@@ -11,6 +11,7 @@ class PhoneBook
 	public:
 		void set_new ();
 		void print_contact (int);
+		void chets();
 };
 #endif
 

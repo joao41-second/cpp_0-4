@@ -7,6 +7,7 @@ int main(void)
 {
 	PhoneBook ok;
 	std::string line;
+	ok.chets();
 	while (line != "EXIT")
 	{
 		std::cin.clear();

@@ -60,3 +60,12 @@ void Contact::print_contact_line(int index)
 		std::cout << set_the_string(nickname) << "|" <<std::endl;
 	}
 }
+
+void Contact::sd_contact()
+{
+	 first_name = "ol";
+	 last_name = "ol";
+	 nickname = "ol";
+	 phonenumber = 99;
+	 darkest = "ol";
+}

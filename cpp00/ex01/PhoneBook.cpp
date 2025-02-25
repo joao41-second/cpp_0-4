@@ -23,3 +23,12 @@ void PhoneBook::print_contact (int i)
 		}
 	}
 }
+
+void::PhoneBook::chets()
+{
+	int i = -1;
+	while (i++ != 7)
+	{
+	 contat[i].sd_contact();	
+	}
+}
