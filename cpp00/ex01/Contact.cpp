@@ -4,17 +4,39 @@
 void Contact::set_new_contact ()
 {
 	phonenumber = -1;
-	std::cout << "the frist name" << std::endl;
+	
+	if(std::cin.eof() == 1)
+		return;
 	std::cin.clear();
+	std::cout  <<"the frist name" << std::endl;
 	std::getline(std::cin,first_name);
+	if(std::cin.eof() == 1)
+		return;
+	std::cin.clear();
 	std::cout << "the last name" << std::endl;
+	if(std::cin.eof() == 1)
+		return;
+	std::cin.clear();
 	std::getline(std::cin,last_name);
+	if(std::cin.eof() == 1)
+		return;
+	std::cin.clear();
 	std::cout << "the nickname"<< std::endl;
+	if(std::cin.eof() == 1)
+		return;
 	std::getline(std::cin,nickname);
+	if(std::cin.eof() == 1)
+		return;
+	std::cin.clear();
 	std::cout << "the fonenumber"<< std::endl;
 	std::getline(std::cin,phonenumber);
+	if(std::cin.eof() == 1)
+		return;
+	std::cin.clear();
 	std::cout << "the darkest"<< std::endl;
 	std::getline(std::cin,darkest);
+	if(std::cin.eof() == 1)
+		return;
 }
 
 void Contact::print_contact()
