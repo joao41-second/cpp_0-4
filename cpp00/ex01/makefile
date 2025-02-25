@@ -6,7 +6,7 @@
 #    By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/19 17:18:36 by jperpct           #+#    #+#              #
-#    Updated: 2025/02/25 13:19:48 by jperpct          ###   ########.fr        #
+#    Updated: 2025/02/25 14:10:20 by jperpct          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,3 +31,6 @@ clean:
 
 fclean:
 	rm $(SRCS) $(NAME)
+
+s:
+	make fclean && make && ./$(NAME)
