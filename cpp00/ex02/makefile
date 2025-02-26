@@ -6,7 +6,7 @@
 #    By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/19 17:18:36 by jperpct           #+#    #+#              #
-#    Updated: 2025/02/26 11:45:36 by jperpct          ###   ########.fr        #
+#    Updated: 2025/02/26 12:44:34 by jperpct          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = cpp00_ex0
 
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
-SRC = Account.cpp
+SRC =  tests.cpp Account.cpp
 SRCS = $(SRC:.cpp=.o)
 
 all: $(NAME)
