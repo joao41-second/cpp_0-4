@@ -17,14 +17,9 @@ int main(int argc,char **argv)
 			{
 			std::cout << (char)std::toupper(argv[d][i]);
 			}
-
 		}
-		std::cout << "\n";
+		std::cout << std::endl; //"\n";
 	}
 	else
-	std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-		
-	
-	
-	return(0);
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 }

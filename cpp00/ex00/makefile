@@ -15,11 +15,19 @@ NAME = cpp00_ex0
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
 SRC = megaphone.cpp
+SRCS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	c++ $(FLAG) $(SRC) -o $(NAME)
+$(NAME): $(SRCS)
+	c++ $(FLAG) $(SRCS) -o $(NAME)
 
-fclean: 
-	rm $(NAME)
+re:
+	make fclean
+	make all
+
+clean:
+	$(SRCS)
+
+fclean:
+	rm $(SRCS) $(NAME)
