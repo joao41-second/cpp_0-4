@@ -6,7 +6,7 @@
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:06:47 by jperpct           #+#    #+#             */
-/*   Updated: 2025/02/28 16:12:05 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:36:57 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ HumanB::HumanB(std::string name)
 	_name = name;
 }
 
-void HumanB::setWepon(wepon weapon)
+void HumanB::setWeapon(Weapon& weapon) 
 {
 	std::cout << "new Weapon" <<std::endl;
-	_wepon =  weapon;
+	_Weapon = &weapon;
 }
 
 void HumanB::attack()
 {
-	std::cout << _name << " attacks with their " << _wepon.getType() << std::endl;
+	std::cout << _name << " attacks with their " << _Weapon->getType() << std::endl;
 }
 
 HumanB::~HumanB()

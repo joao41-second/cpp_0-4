@@ -6,27 +6,27 @@
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:42:09 by jperpct           #+#    #+#             */
-/*   Updated: 2025/02/28 16:27:44 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:28:09 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef WEPON_HPP
-#define WEPON_HPP
+#ifndef Weapon_HPP
+#define Weapon_HPP
 
 #include <iostream>
 
-class wepon
+class Weapon
 {
   private: 
 	std::string _type;
   public:
-	wepon(std::string);
+	Weapon(std::string);
 	void setType(std::string);
 	std::string getType();
-	~wepon();
+	~Weapon();
 
 };
 
-#endif // !WEPON_HPP
+#endif // !Weapon_HPP
 

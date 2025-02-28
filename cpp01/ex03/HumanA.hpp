@@ -6,7 +6,7 @@
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:40:15 by jperpct           #+#    #+#             */
-/*   Updated: 2025/02/28 16:30:02 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:30:03 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class HumanA
 {
  private:
 	std::string _name;
-	wepon *_wepon; 
+	Weapon &_Weapon; 
 public:
-	HumanA(std::string ,wepon*  );
+	HumanA(std::string ,Weapon & );
 	void attack();
 	~HumanA();
 };

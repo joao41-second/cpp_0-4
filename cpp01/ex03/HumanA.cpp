@@ -6,7 +6,7 @@
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:00:19 by jperpct           #+#    #+#             */
-/*   Updated: 2025/02/28 16:29:15 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:32:46 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 #include "Weapon.hpp"
 
 
-HumanA::HumanA(std::string name,wepon * Wepon)
+HumanA::HumanA(std::string name,Weapon& Weapon) : _Weapon(Weapon) , _name(name)
 {
 	std::cout << "create the HumanA" <<std::endl;
-	_name = name;
-	_wepon = Wepon;
 }
 
 void HumanA::attack()
 {
-	std::cout << _name << " attacks with their " << _wepon->getType() << std::endl;
+	std::cout << _name << " attacks with their " << _Weapon.getType() << std::endl;
 }
 
 

@@ -6,7 +6,7 @@
 #    By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/19 17:18:36 by jperpct           #+#    #+#              #
-#    Updated: 2025/02/28 16:31:44 by jperpct          ###   ########.fr        #
+#    Updated: 2025/02/28 17:37:11 by jperpct          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Weapon
 
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
-SRC =  main.cpp Weapon.cpp HumanA.cpp 
+SRC =  main.cpp Weapon.cpp HumanA.cpp HumanB.cpp 
 SRCS = $(SRC:.cpp=.o)
 
 all: $(NAME)

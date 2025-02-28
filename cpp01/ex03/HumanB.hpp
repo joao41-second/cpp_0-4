@@ -6,7 +6,7 @@
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:57:25 by jperpct           #+#    #+#             */
-/*   Updated: 2025/02/28 16:11:18 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/02/28 17:36:13 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class HumanB
 {
  private:
 	std::string _name;
-	wepon _wepon;
+	Weapon *_Weapon;
  public:
 	HumanB(std::string);
-	void setWepon(wepon);
+	void setWeapon(Weapon &);
 	void attack();
 	~HumanB();
 };
