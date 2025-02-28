@@ -36,18 +36,21 @@ int main(int argv , char **argc)
 			return 1;
 		}
 		new_file_name = (std::string)argc[1] + ".replace";
-		file.open(new_file_name);
+		file_new.open(new_file_name);
+		if(file_new.is_open() == false)
+		{
+			std::cout << "error in open the file" << std::endl;
+			return 1;
+		}
 		str_ =(std::string) argc[3];
-		while ( getline(file,buff) )
+		while ( getline(file,buff , '\n'))
 		{
 		 locate = buff.find((std::string)argc[2]);
-		new_file_name << buff.replace(locate,str_.size, str_);
-		}
-
-		//std::cout << str.find("estou");
-
-		//std::cout << str.replace(10,5,"aaaaa");
-		
+		 if(locate != -1)
+			 file_new << buff.replace(locate,str_.length(), str_) << std::endl;
+		 else 
+			file_new << buff << std::endl; 
+		}	
 		file.close();
 	}
 	else
