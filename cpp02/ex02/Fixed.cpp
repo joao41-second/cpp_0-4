@@ -97,7 +97,32 @@ float Fixed::toFloat(void) const
 	return((float) this->_vaule / (float)( 1 << this->_fract));
 }
 
+Fixed const &Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if(a > b)
+	  return (a);
+	else 
+	 return (b);
+}
 
+
+Fixed const &Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if(a < b)
+	  return (a);
+	else 
+	 return (b);
+}
+
+
+
+Fixed const &min(Fixed const &a, Fixed const &b) {
+	return Fixed::min(a, b);
+}
+
+Fixed const &max(Fixed const &a, Fixed const &b) {
+	return Fixed::max(a, b);
+}
 Fixed Fixed::operator*(Fixed const &other) const
 {
 	Fixed ret;

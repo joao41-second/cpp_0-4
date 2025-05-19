@@ -66,12 +66,17 @@ class Fixed
 	 Fixed operator--(int);
 
 
+	const static Fixed &min(Fixed const &a,Fixed const &b);
 
+	const static Fixed &max(Fixed const &a,Fixed const &b);
 };
 
 
 std::ostream &operator<<(std::ostream &o, Fixed const &fixed);
 
+Fixed const &max(Fixed const &a, Fixed const &b);
+
+Fixed const &min(Fixed const &a, Fixed const &b);
 
 
 
