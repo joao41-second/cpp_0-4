@@ -48,7 +48,18 @@ class Fixed
 
 	 Fixed &operator=( Fixed const  &src);
 
-	 Fixed operator * (Fixed const &otre)const;
+	 bool operator < (Fixed const &other)const;
+	 bool operator > (Fixed const &other)const;
+	 bool operator >= (Fixed const &other)const;
+	 bool operator <= (Fixed const &other)const;
+	 bool operator == (Fixed const &other)const;
+	 bool operator != (Fixed const &other)const;
+	 
+	 Fixed operator * (Fixed const &other)const;
+	 Fixed operator - (Fixed const &other)const;
+	 Fixed operator + (Fixed const &other)const;
+	 Fixed operator / (Fixed const &other)const;
+
 };
 
 
