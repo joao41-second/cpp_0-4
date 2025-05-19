@@ -60,6 +60,13 @@ class Fixed
 	 Fixed operator + (Fixed const &other)const;
 	 Fixed operator / (Fixed const &other)const;
 
+	 Fixed& operator++();
+	 Fixed operator++(int);
+	 Fixed& operator--();
+	 Fixed operator--(int);
+
+
+
 };
 
 

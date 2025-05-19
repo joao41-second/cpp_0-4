@@ -133,6 +133,9 @@ Fixed Fixed::operator-(Fixed const &other) const
 			(this->getRawBits() - other.getRawBits()));
 	return (ret);
 }
+
+
+
 bool Fixed::operator<(Fixed const &other) const
 {
 	return (this->getRawBits() < other.getRawBits());
@@ -161,6 +164,35 @@ bool Fixed::operator==(Fixed const &other) const
 bool Fixed::operator!=(Fixed const &other) const
 {
 	return (this->getRawBits() != other.getRawBits());
+}
+
+
+Fixed &Fixed::operator++()
+{
+	this->_vaule++;	
+	return *this;
+}
+
+Fixed &Fixed::operator--()
+{
+	this->_vaule--;	
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed ret(*this);
+	operator++();
+	return ret;
+
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed ret(*this);
+	operator--();
+	return ret;
+
 }
 
 // operator para std::count; 
