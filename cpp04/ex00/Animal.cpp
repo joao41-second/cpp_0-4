@@ -25,3 +25,8 @@ Animal::~Animal()
 	std::cout << "end Animal" << std::endl;
 }
 
+
+std::string Animal::get_Type()
+{
+	return (this->_string);
+}

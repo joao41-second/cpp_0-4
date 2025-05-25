@@ -11,16 +11,25 @@
 /* ************************************************************************** */
 
 
+#include "Animal.hpp"
 #include "Dog.hpp"
 
 #include "Cat.hpp"
+#include <iostream>
+#include <iterator>
 
 
 int main()
 {
-	Cat cat;
-	Dog dog;
+	const Animal * meta = new Animal();
 
-	cat.makeSound();	
-	dog.makeSound();
+	const Animal * j = new Dog();
+
+	const Animal * i = new Cat();
+	
+	std::cout << j->get_Type() << "oi"<< std::endl;
+
+	std::cout << i->get_Type() << "oi "<<  std::endl;
+
+
 }

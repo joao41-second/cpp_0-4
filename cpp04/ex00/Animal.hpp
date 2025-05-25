@@ -25,5 +25,6 @@ class Animal
 		Animal(Animal &copy);
 		~Animal();
 		Animal & operator=(Animal &var);
+		std::string get_Type();
 };
 #endif
