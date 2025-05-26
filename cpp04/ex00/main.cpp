@@ -31,5 +31,7 @@ int main()
 
 	std::cout << i->get_Type() << "oi "<<  std::endl;
 
+	std::cout << meta->get_Type() << "oi "<<  std::endl;
+
 
 }

@@ -22,9 +22,10 @@ class Animal
 		std::string _string;
 	public:
 		Animal(std::string string);
+		Animal();
 		Animal(Animal &copy);
 		~Animal();
 		Animal & operator=(Animal &var);
-		std::string get_Type();
+		std::string get_Type() const;
 };
 #endif

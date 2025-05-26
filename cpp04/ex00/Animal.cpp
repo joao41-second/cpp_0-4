@@ -6,6 +6,11 @@ Animal::Animal(std::string string):_string(string)
 	std::cout << "Start Animal" << std::endl;
 }
 
+Animal::Animal():_string("NULL")
+{
+	std::cout << "Start Animal in NULL" << std::endl;
+}
+
 Animal::Animal(Animal &Animal) 
 {
 	std::cout << "Copy Animal" << std::endl;
@@ -26,7 +31,7 @@ Animal::~Animal()
 }
 
 
-std::string Animal::get_Type()
+std::string Animal::get_Type() const
 {
 	return (this->_string);
 }
