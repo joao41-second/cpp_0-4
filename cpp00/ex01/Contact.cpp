@@ -8,7 +8,7 @@ void Contact::set_new_contact ()
 	if(std::cin.eof() == 1)
 		return;
 	std::cin.clear();
-	std::cout  <<"the frist name" << std::endl;
+	std::cout  <<"the first name" << std::endl;
 	std::getline(std::cin,first_name);
 	if(std::cin.eof() == 1)
 		return;
@@ -28,12 +28,12 @@ void Contact::set_new_contact ()
 	if(std::cin.eof() == 1)
 		return;
 	std::cin.clear();
-	std::cout << "the fonenumber"<< std::endl;
+	std::cout << "the phonenumber"<< std::endl;
 	std::getline(std::cin,phonenumber);
 	if(std::cin.eof() == 1)
 		return;
 	std::cin.clear();
-	std::cout << "the darkest"<< std::endl;
+	std::cout << "the darkest secret"<< std::endl;
 	std::getline(std::cin,darkest);
 	if(std::cin.eof() == 1)
 		return;
@@ -41,17 +41,17 @@ void Contact::set_new_contact ()
 
 void Contact::print_contact()
 {
-	std::cout << "the frist name" << std::endl;
+	std::cout << "the first name" << std::endl;
 	std::cout << first_name;
 	std::cout << "the last name" << std::endl;
 	std::cout << last_name;
 	std::cout << "the nickname"<< std::endl;
 	std::cout << nickname;
-	std::cout << "the fonenumber"<< std::endl;
+	std::cout << "the phonenumber"<< std::endl;
 	std::cout << phonenumber;
-	std::cout << "the darkest secre"<< std::endl;
+	std::cout << "the darkest secret"<< std::endl;
 	std::cout << darkest;
-	std::cout<< "end the forms" << std::endl;
+	std::cout<< "end of the form" << std::endl;
 }
 
 std::string Contact::set_the_string(std::string chek)

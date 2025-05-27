@@ -9,6 +9,8 @@ int main(void)
 	PhoneBook ok;
 	std::string line;
 	ok.chets();
+
+	std::cout << " Start ofthe PhoneBook :" << std::endl;
 	while (line != "EXIT")
 	{
 		std::getline(std::cin,line);
