@@ -23,11 +23,12 @@ $(NAME): $(SRCS)
 	c++ $(FLAG) $(SRCS) -o $(NAME)
 
 re:
+	make all
 	make fclean
 	make all
 
 clean:
-	$(SRCS)
+	rm 	$(SRCS)
 
 fclean:
 	rm $(SRCS) $(NAME)
