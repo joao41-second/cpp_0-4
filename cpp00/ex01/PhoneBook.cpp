@@ -27,7 +27,7 @@ void PhoneBook::print_contact (int i)
 		}
 	}
 	std::getline(std::cin,nb);
-	if(std::stoi(nb) <= 8 && std::stoi(nb)> -1)
+	if(std::cin.fail() && std::stoi(nb) <= 8 && std::stoi(nb)> -1)
 		contat[std::stoi(nb)].print_contact();
 	else 
 		std::cout << "not number valid" << std::endl;

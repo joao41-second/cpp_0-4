@@ -6,37 +6,37 @@ void Contact::set_new_contact ()
 	phonenumber = -1;
 	
 	if(std::cin.eof() == 1)
-		return;
+		return(this->sd_contact());
 	std::cin.clear();
 	std::cout  <<"the first name" << std::endl;
 	std::getline(std::cin,first_name);
-	if(std::cin.eof() == 1)
-		return;
+	if( first_name.empty()|| std::cin.eof() == 1)
+		return(this->sd_contact());
 	std::cin.clear();
 	std::cout << "the last name" << std::endl;
-	if(std::cin.eof() == 1)
-		return;
+	if( std::cin.eof() == 1)
+		return(this->sd_contact());
 	std::cin.clear();
 	std::getline(std::cin,last_name);
-	if(std::cin.eof() == 1)
-		return;
+	if( last_name.empty()||std::cin.eof() == 1)
+		return(this->sd_contact());
 	std::cin.clear();
 	std::cout << "the nickname"<< std::endl;
 	if(std::cin.eof() == 1)
-		return;
+		return(this->sd_contact());
 	std::getline(std::cin,nickname);
-	if(std::cin.eof() == 1)
-		return;
+	if( nickname.empty()||std::cin.eof() == 1)
+		return(this->sd_contact());
 	std::cin.clear();
 	std::cout << "the phonenumber"<< std::endl;
 	std::getline(std::cin,phonenumber);
-	if(std::cin.eof() == 1)
-		return;
+	if(phonenumber.empty()||std::cin.eof() == 1)
+		return(sd_contact());
 	std::cin.clear();
 	std::cout << "the darkest secret"<< std::endl;
 	std::getline(std::cin,darkest);
-	if(std::cin.eof() == 1)
-		return;
+	if(darkest.empty()||std::cin.eof() == 1)
+		return(this->sd_contact());
 }
 
 void Contact::print_contact()
