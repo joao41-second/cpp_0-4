@@ -20,7 +20,8 @@
 void PhoneBook::set_new ()
 {
 	static int nb;
-	 contat[nb].set_new_contact();
+	if( contat[nb].set_new_contact() == 1)
+		return;
 	if (nb == 7)
 		nb = -1;
 	nb++;

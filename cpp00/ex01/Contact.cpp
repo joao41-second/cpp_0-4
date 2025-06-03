@@ -13,42 +13,43 @@
 #include "Contact.hpp"
 #include <string>
 
-void Contact::set_new_contact ()
+int Contact::set_new_contact ()
 {
 	phonenumber = -1;
 	
 	if(std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact(),1);
 	std::cin.clear();
 	std::cout  <<"the first name" << std::endl;
 	std::getline(std::cin,first_name);
 	if( first_name.empty()|| std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact(),1);
 	std::cin.clear();
 	std::cout << "the last name" << std::endl;
 	if( std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact(),1);
 	std::cin.clear();
 	std::getline(std::cin,last_name);
 	if( last_name.empty()||std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact(),1);
 	std::cin.clear();
 	std::cout << "the nickname"<< std::endl;
 	if(std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact(),1);
 	std::getline(std::cin,nickname);
 	if( nickname.empty()||std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact()),1;
 	std::cin.clear();
 	std::cout << "the phonenumber"<< std::endl;
 	std::getline(std::cin,phonenumber);
 	if(phonenumber.empty()||std::cin.eof() == 1)
-		return(sd_contact());
+		return(sd_contact()),1;
 	std::cin.clear();
 	std::cout << "the darkest secret"<< std::endl;
 	std::getline(std::cin,darkest);
 	if(darkest.empty()||std::cin.eof() == 1)
-		return(this->sd_contact());
+		return(this->sd_contact(),1);
+	return (0);
 }
 
 void Contact::print_contact()
