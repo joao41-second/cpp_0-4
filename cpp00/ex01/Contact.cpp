@@ -53,17 +53,17 @@ void Contact::set_new_contact ()
 
 void Contact::print_contact()
 {
-	std::cout << "the first name" << std::endl;
+	std::cout << " the first name" << std::endl;
 	std::cout << first_name;
-	std::cout << "the last name" << std::endl;
+	std::cout << " the last name" << std::endl;
 	std::cout << last_name;
-	std::cout << "the nickname"<< std::endl;
+	std::cout << " the nickname"<< std::endl;
 	std::cout << nickname;
-	std::cout << "the phonenumber"<< std::endl;
+	std::cout << " the phonenumber"<< std::endl;
 	std::cout << phonenumber;
-	std::cout << "the darkest secret"<< std::endl;
+	std::cout << " the darkest secret"<< std::endl;
 	std::cout << darkest;
-	std::cout<< "end of the form" << std::endl;
+	std::cout<< " end of the form" << std::endl;
 }
 
 std::string Contact::set_the_string(std::string chek)

@@ -38,17 +38,20 @@ void PhoneBook::print_contact (int i)
 			contat[e].print_contact_line(e);
 		}
 	}
-	std::getline(std::cin,nb);
-	if(std::cin.fail() && std::stoi(nb) <= 8 && std::stoi(nb)> -1)
-		contat[std::stoi(nb)].print_contact();
+	std::cin >> e;
+	if( e <= 8 && e > 0 )
+		contat[e].print_contact();
 	else 
 		std::cout << "not number valid" << std::endl;
+	
+	std::cin.clear();
+	std::cin.ignore();
 }
 
 void::PhoneBook::chets()
 {
 	int i = -1;
-	while (i++ != 7)
+	while (++i != 8)
 	{
 		contat[i].sd_contact();
 	}
