@@ -28,7 +28,8 @@ int main(void)
 		if(line == "ADD")
 			ok.set_new();
 		if(line == "SEARCH")
-			ok.print_contact(-1);
+			ok.print_contact(-1);	
+		std::cout << "prompt:" << std::endl;
 	}
 	
 }

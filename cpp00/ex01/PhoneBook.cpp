@@ -12,6 +12,7 @@
 
 #include "Contact.hpp"
 #include <cstdio>
+#include <cstdlib>
 #include <iostream>
 #include <string>
 #include "PhoneBook.hpp"
@@ -39,14 +40,22 @@ void PhoneBook::print_contact (int i)
 			contat[e].print_contact_line(e);
 		}
 	}
-	std::cin >> e;
+	std::getline(std::cin,nb);
+	e = std::atoi(nb.c_str());
+	if(nb.empty()||std::cin.eof() == 1)
+	{
+		std::cout << "not number valid" << std::endl;
+
+		std::cin.clear();
+		return;
+	}
+
 	if( e <= 8 && e > 0 )
-		contat[e].print_contact();
+		contat[e-1].print_contact();
 	else 
 		std::cout << "not number valid" << std::endl;
 	
 	std::cin.clear();
-	std::cin.ignore();
 }
 
 void::PhoneBook::chets()

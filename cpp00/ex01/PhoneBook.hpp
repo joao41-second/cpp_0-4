@@ -18,7 +18,8 @@
 #include <iostream>
 class PhoneBook
 {
-	Contact contat[9];
+	private:
+		Contact contat[9];
 	public:
 		void set_new ();
 		void print_contact (int);

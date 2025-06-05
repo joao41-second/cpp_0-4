@@ -17,6 +17,11 @@ FLAG =  -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp PhoneBook.cpp Contact.cpp
 SRCS = $(SRC:.cpp=.o)
 
+%.o:%.cpp 
+	$(CC) $(FLAG) -c $< -o $@
+
+
+
 all: $(NAME)
 
 $(NAME): $(SRCS)
