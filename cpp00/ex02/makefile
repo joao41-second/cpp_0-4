@@ -17,6 +17,9 @@ FLAG =  -Wall -Wextra -Werror -std=c++98
 SRC =  tests.cpp Account.cpp
 SRCS = $(SRC:.cpp=.o)
 
+%.o:%.cpp 
+	$(CC) $(FLAG) -c $< -o $@
+
 all: $(NAME)
 
 $(NAME): $(SRCS)
