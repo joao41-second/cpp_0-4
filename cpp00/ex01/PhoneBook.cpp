@@ -14,6 +14,8 @@
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
+#include <iterator>
+#include <ostream>
 #include <string>
 #include "PhoneBook.hpp"
 
@@ -33,6 +35,12 @@ void PhoneBook::print_contact (int i)
 	int e;
 	std::string nb;
 	e = -1;
+	if(contat[0].get_contact_vaule(1) == "")
+	{
+		std::cin.clear();
+		std::cout << "not number in PhoneBook" << std::endl;
+		return;
+	}
 	if(i == -1)
 	{
 		while(++e != 8)
@@ -40,6 +48,7 @@ void PhoneBook::print_contact (int i)
 			contat[e].print_contact_line(e);
 		}
 	}
+	std::cout << "nubmer id for contact:" << std::endl;
 	std::getline(std::cin,nb);
 	e = std::atoi(nb.c_str());
 	if(nb.empty()||std::cin.eof() == 1)

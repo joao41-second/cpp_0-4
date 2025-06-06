@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cpp00_ex0
+NAME = cpp00_ex01
 
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
@@ -21,21 +21,19 @@ SRCS = $(SRC:.cpp=.o)
 	$(CC) $(FLAG) -c $< -o $@
 
 
-
 all: $(NAME)
 
 $(NAME): $(SRCS)
-	c++ $(FLAG) $(SRCS) -o $(NAME)
-re: 
-	make all
-	make fclean
+	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+
+re:fclean
 	make all
 
 clean:
 	rm -fr	$(SRCS)
 
-fclean:
-	rm -fr $(SRCS) $(NAME)
+fclean:clean
+	rm -fr $(NAME)
 
 s:
 	make fclean && make && ./$(NAME)

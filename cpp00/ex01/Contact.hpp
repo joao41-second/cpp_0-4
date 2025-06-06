@@ -20,9 +20,10 @@ class Contact
 	private:
 		std::string set_the_string(std::string);	
 		std::string first_name,last_name,nickname,darkest;
-		std::string phonenumber;
+		int phonenumber;
 	public:
 		int set_new_contact();
+		std::string get_contact_vaule(int index);
 		void print_contact();
 		void print_contact_line(int);
 		void sd_contact();

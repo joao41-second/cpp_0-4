@@ -11,7 +11,26 @@
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <string>
+#include <cstdlib>
+#include <iostream>
+#include <ostream>
+#include <sstream>
+
+std::string Contact::get_contact_vaule(int i)
+{
+	std::ostringstream  nb;
+	if(i == 1)
+		return ( first_name);
+	if(i == 2)
+		return ( last_name);
+	if(i == 3)
+		return ( nickname);
+	if(i == 4)
+		return (nb.str());
+	if(i == 5)
+		return ( darkest);
+	return (NULL);
+}
 
 int Contact::set_new_contact ()
 {
@@ -41,30 +60,33 @@ int Contact::set_new_contact ()
 		return(this->sd_contact()),1;
 	std::cin.clear();
 	std::cout << "the phonenumber"<< std::endl;
-	std::getline(std::cin,phonenumber);
-	if(phonenumber.empty()||std::cin.eof() == 1)
+	std::string nb;
+	std::getline(std::cin,nb);
+	if(nb.empty()||std::cin.eof() == 1)
 		return(sd_contact()),1;
+	phonenumber = std::atoi(nb.c_str());
 	std::cin.clear();
 	std::cout << "the darkest secret"<< std::endl;
 	std::getline(std::cin,darkest);
 	if(darkest.empty()||std::cin.eof() == 1)
 		return(this->sd_contact(),1);
+	std::cout << "Adding the new contanc" << std::endl;
 	return (0);
 }
 
 void Contact::print_contact()
 {
-	std::cout << " the first name" << std::endl;
-	std::cout << first_name;
-	std::cout << " the last name" << std::endl;
-	std::cout << last_name;
-	std::cout << " the nickname"<< std::endl;
-	std::cout << nickname;
-	std::cout << " the phonenumber"<< std::endl;
-	std::cout << phonenumber;
-	std::cout << " the darkest secret"<< std::endl;
-	std::cout << darkest;
-	std::cout<< " end of the form" << std::endl;
+	std::cout << "The first name:" << std::endl;
+	std::cout << first_name << std::endl;
+	std::cout << "The last name:" << std::endl;
+	std::cout << last_name << std::endl;
+	std::cout << "The nickname:"<< std::endl;
+	std::cout << nickname << std::endl;
+	std::cout << "The phonenumber :"<< std::endl;
+	std::cout << phonenumber << std::endl;
+	std::cout << "The darkest secret :"<< std::endl;
+	std::cout << darkest << std::endl;
+	std::cout<< "End of the form" << std::endl;
 }
 
 std::string Contact::set_the_string(std::string chek)
@@ -84,7 +106,7 @@ std::string Contact::set_the_string(std::string chek)
 
 void Contact::print_contact_line(int index)
 {
-	if(first_name != "\0" && last_name != "\0" && nickname != "\0" && phonenumber != "\0" && darkest != "\0")
+	if(first_name != "\0" && last_name != "\0" && nickname != "\0"  && darkest != "\0")
 	{
 		std::cout << std::string(9,' ') << index+1 << "|";
 		std::cout << set_the_string(first_name) << "|";
@@ -95,9 +117,9 @@ void Contact::print_contact_line(int index)
 
 void Contact::sd_contact()
 {
-	 first_name = "ol";
-	 last_name = "ol";
-	 nickname = "ol";
-	 phonenumber = "99";
-	 darkest = "ol";
+	 first_name = "";
+	 last_name = "";
+	 nickname = "";
+	 phonenumber = 0;
+	 darkest = "";
 }
