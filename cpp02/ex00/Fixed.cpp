@@ -13,8 +13,7 @@
 #include "Fixed.hpp"
 #include <iostream>
 
-int  Fixed::_fract = 8;
-
+const int  Fixed::_fract = 8;
 
 Fixed::Fixed():_vaule(0)
 {
@@ -23,7 +22,7 @@ Fixed::Fixed():_vaule(0)
 Fixed::~Fixed()
 {
 
-	std::cout << "distoied the Fixed" << std::endl;
+	std::cout << "distroied the Fixed" << std::endl;
 }
 
 Fixed::Fixed(Fixed &other)

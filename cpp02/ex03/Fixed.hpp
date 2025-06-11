@@ -15,11 +15,12 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
+#define PRINT 0
 class Fixed
 {
 	private :
 		int _vaule;
-		static int _fract;
+		static const int _fract;
 	public:
 
 	// construc defult

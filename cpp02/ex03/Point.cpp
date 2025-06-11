@@ -31,6 +31,9 @@ Point::~Point()
 
 Point &Point::operator=(const Point &point)
 {
+	(void) point;
+	this->_x = point._x;
+	this->_y = point._y;
 	return(*this);
 }
 

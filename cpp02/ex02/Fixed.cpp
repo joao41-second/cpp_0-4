@@ -13,27 +13,25 @@
 #include <iostream>
 #include <math.h>
 
-int  Fixed::_fract = 8;
+int const Fixed::_fract = 8;
 
 // constuct
 Fixed::Fixed():_vaule(0)
 {
-//	std::cout << "create the Fixed" << std::endl;
+	std::cout << "create the Fixed" << std::endl;
 }
 
 
 Fixed::Fixed(const int new_value)
 {
 	this->_vaule = new_value << this->_fract;
-
-//	std::cout << "create the Fixed used int " << std::endl;
+	std::cout << "create the Fixed used int " << std::endl;
 }
 
 Fixed::Fixed(const float new_value)
 {
 	this->_vaule =  roundf(new_value * (1 << this->_fract));
-
-//	std::cout << "create the Fixed used float " << std::endl;
+	std::cout << "create the Fixed used float " << std::endl;
 }
 
 
@@ -42,14 +40,14 @@ Fixed::Fixed(const float new_value)
 Fixed::~Fixed()
 {
 
-//	std::cout << "distoied the Fixed" << std::endl;
+	std::cout << "distroied the Fixed" << std::endl;
 }
 
 
 // copy
 Fixed::Fixed(const Fixed &other)
 {
-  //std::cout << "copy the class" << std::endl;
+  std::cout << "copy the class" << std::endl;
   *this = other;
 }
 
@@ -58,7 +56,7 @@ Fixed::Fixed(const Fixed &other)
 //
 Fixed &Fixed::operator=(const Fixed &src)
 {
-	//std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Assignation operator called" << std::endl;
 	if(this != &src)
 	{
 		this->_vaule= src.getRawBits();
@@ -73,7 +71,7 @@ Fixed &Fixed::operator=(const Fixed &src)
 // the getRawBits return the value saved in bits 
 int Fixed::getRawBits() const
 {
-//	std::cout << "get the getRawBits" << std::endl;
+	//std::cout << "get the getRawBits" << std::endl;
 	return(_vaule);
 }
 
@@ -82,7 +80,7 @@ int Fixed::getRawBits() const
 void Fixed::setRawBits(int vaule)
 {
 
-//	std::cout << "sete new vaule" << std::endl;
+	//std::cout << "sete new vaule" << std::endl;
 	_vaule = vaule;
 }
 

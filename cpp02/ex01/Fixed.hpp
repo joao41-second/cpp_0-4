@@ -20,7 +20,7 @@ class Fixed
 {
 	private :
 		int _vaule;
-		static int _fract;
+		static const int _fract;
 	public:
 
 	// construc defult
