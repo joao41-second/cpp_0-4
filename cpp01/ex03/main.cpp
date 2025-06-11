@@ -14,16 +14,23 @@
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 
+
 int main()
 {
-	Weapon nife =  Weapon("hello i am nife");
-
-	Weapon pistol =  Weapon("bommm");
-	
-	HumanA bob =  HumanA("bob",nife);
-	HumanB kill = HumanB("kill");
-	kill.setWeapon(pistol);
-
-	bob.attack();
-	kill.attack();
+{
+Weapon club = Weapon("crude spiked club");
+HumanA bob("Bob", club);
+bob.attack();
+club.setType("some other type of club");
+bob.attack();
+}
+{
+Weapon club = Weapon("crude spiked club");
+HumanB jim("Jim");
+jim.setWeapon(club);
+jim.attack();
+club.setType("some other type of club");
+jim.attack();
+}
+return 0;
 }

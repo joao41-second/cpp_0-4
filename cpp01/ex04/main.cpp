@@ -25,29 +25,40 @@ int main(int argv , char **argc)
 	std::string	  new_file_name;
 	std::string	str_;
 	std::string buff;
-	int locate;
+	int locate;	
+	std::string argc1;
+	std::string argc2;
+	int len;
 
 	if(argv == 4)
 	{
-		file.open((std::string)argc[1]);
+		argc1 = argc[1];
+		argc2 = argc[2];
+		file.open(argc[1]);
 		if(file.is_open() == false)
 		{
 			std::cout << "error in open the file" << std::endl;
 			return 1;
 		}
-		new_file_name = (std::string)argc[1] + ".replace";
-		file_new.open(new_file_name);
+		new_file_name = argc1 + ".replace";
+		file_new.open(new_file_name.c_str());
 		if(file_new.is_open() == false)
 		{
 			std::cout << "error in open the file" << std::endl;
 			return 1;
 		}
 		str_ =(std::string) argc[3];
+
+			len = argc2.length();
+
 		while ( getline(file,buff , '\n'))
 		{
 		 locate = buff.find((std::string)argc[2]);
 		 if(locate != -1)
-			 file_new << buff.replace(locate,str_.length(), str_) << std::endl;
+		 {
+			 buff.replace(locate,len, "") ;
+			 file_new <<  buff.insert(locate,str_) << std::endl;
+		 }
 		 else 
 			file_new << buff << std::endl; 
 		}	

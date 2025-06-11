@@ -12,6 +12,7 @@
 
 
 #include "Zombie.hpp"
+#include <ostream>
 
 
 Zombie* zombieHorde( int N, std::string name);
@@ -26,6 +27,7 @@ int main()
 	int i=-1;
 	while (++i < 10) 
 	{
+		std::cout  << "nb Zombie" << i << std::endl;
 		order[i].announce();
 	}
 	i = -1;

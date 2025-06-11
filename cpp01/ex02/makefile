@@ -10,27 +10,31 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = ex02
 
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
-SRC =  main.cpp  
+SRC =  main.cpp 
 SRCS = $(SRC:.cpp=.o)
+
+%.o:%.cpp 
+	$(CC) $(FLAG) -c $< -o $@
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	c++ $(FLAG) $(SRCS) -o $(NAME)
+ 
 
-re:
-	make fclean
+$(NAME): $(SRCS)
+	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+
+re:fclean
 	make all
 
 clean:
-	$(SRCS)
+	rm -fr	$(SRCS)
 
-fclean:
-	rm $(SRCS) $(NAME)
+fclean:clean
+	rm -fr $(NAME)
 
 s:
 	make fclean && make && ./$(NAME)

@@ -16,12 +16,8 @@
 int  main()
 {
 	Harl start;
-
-
-start.complain("ERROR");
-
-
-start.complain("INFO");
-
-	
+	start.complain("ERROR");
+	start.complain("INFO");
+	start.complain("WARNING");
+	start.complain("DEBUG");	
 }

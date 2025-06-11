@@ -15,7 +15,6 @@
 #define HUMANB_HPP
 
 #include "Weapon.hpp"
-#include <chrono>
 #include <iostream>
 
 class HumanB 

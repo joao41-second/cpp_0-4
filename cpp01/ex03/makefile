@@ -17,20 +17,25 @@ FLAG =  -Wall -Wextra -Werror -std=c++98
 SRC =  main.cpp Weapon.cpp HumanA.cpp HumanB.cpp 
 SRCS = $(SRC:.cpp=.o)
 
+
+%.o:%.cpp 
+	$(CC) $(FLAG) -c $< -o $@
+
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	c++ $(FLAG) $(SRCS) -o $(NAME)
+ 
 
-re:
-	make fclean
+$(NAME): $(SRCS)
+	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+
+re:fclean
 	make all
 
 clean:
-	$(SRCS)
+	rm -fr	$(SRCS)
 
-fclean:
-	rm $(SRCS) $(NAME)
+fclean:clean
+	rm -fr $(NAME)
 
 s:
 	make fclean && make && ./$(NAME)

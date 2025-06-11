@@ -14,8 +14,9 @@
 #include "Weapon.hpp"
 
 
-HumanA::HumanA(std::string name,Weapon& Weapon) : _Weapon(Weapon) , _name(name)
+HumanA::HumanA(std::string name,Weapon& Weapon): _Weapon(Weapon)
 {
+	_name = name;
 	std::cout << "create the HumanA" <<std::endl;
 }
 
