@@ -19,16 +19,12 @@
 #include <string>
 
 class DiamondTrap : public FragTrap , public ScavTrap
-{
-	private:
-		std::string _name;
-	
+{	
 	public:
 		DiamondTrap( std::string _name);
 		DiamondTrap(DiamondTrap &other);
 		DiamondTrap &operator=(DiamondTrap &other);
 		~DiamondTrap();
-		std::string get_name();
 		void whoAmI();
 };
 #endif

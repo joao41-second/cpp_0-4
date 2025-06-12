@@ -29,6 +29,8 @@ DiamondTrap::DiamondTrap(std::string _name) : ClapTrap(_name + "_Clap_name"), Fr
 
 DiamondTrap::DiamondTrap(DiamondTrap &copy) : ClapTrap(copy._name + "_Clap_name"), FragTrap(copy._name +"_Clap_name") ,ScavTrap(copy._name+"_Clap_name")
 {
+
+	std::cout << "copy DiamondTrap " << std::endl;
 	*this = copy;
 }
 
@@ -45,6 +47,8 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap & other)
 
 DiamondTrap::~DiamondTrap()
 {
+
+	std::cout << "end DiamondTrap " << std::endl;
 }
 
 void DiamondTrap::whoAmI()
@@ -52,8 +56,4 @@ void DiamondTrap::whoAmI()
 	std::cout << "not goo lor of the is use this function " << std::endl;
 }
 
-std::string DiamondTrap::get_name()
-{
-	return this->_name;
 
-}

@@ -51,8 +51,4 @@ FragTrap::~FragTrap()
 	std::cout << "end FragTrap" << std::endl;
 }
 
-std::string FragTrap::get_name()
-{
-	return this->_name;
 
-}

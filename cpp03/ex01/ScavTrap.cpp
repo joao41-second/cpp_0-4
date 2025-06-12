@@ -19,9 +19,10 @@
 
 ScavTrap::ScavTrap(std::string str) : ClapTrap(str)
 {
-	this->_points_energy = energy;
-	this->_points_hit = hit;
-	this->_points_attack = atack;
+	_points_energy = energy;
+	_points_hit = hit;
+	_points_attack = atack;
+	_name = str;
 	std::cout << "new ScavTrap" << std::endl;
 }
 
@@ -48,7 +49,7 @@ void ScavTrap::attack(std::string name)
 	if(this->_points_energy > 0 && this->_points_hit > 0)
 	{
 
-		std::cout << " attack wowoww" << std::endl;
+		std::cout << _name << ": attack wowoww :" << name << std::endl;
 		this->_points_energy--;
 	}else if( this->_points_energy <= 0)
 	{
@@ -66,15 +67,22 @@ void ScavTrap::guardGate()
 	if(this->_points_energy > 0 && this->_points_hit > 0)
 	{
 
-		std::cout << " enable gate mode" << std::endl;
+		std::cout << _name << ": enable gate mode" << std::endl;
 		this->_points_energy--;
 	}else if( this->_points_energy <= 0)
 	{
-		std::cout << "not energy for gate node " << std::endl;
+		std::cout << _name << "; not energy for gate node " << std::endl;
 	}
 	else {
 
-		std::cout << "not is posible start gate mode"  << std::endl;
+		std::cout << _name << ": not is posible start gate mode"  << std::endl;
 	}
 
+}
+
+
+ScavTrap::~ScavTrap()
+{
+
+		std::cout << "end ScavTrap"  << std::endl;
 }

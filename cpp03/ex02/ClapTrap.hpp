@@ -21,8 +21,7 @@ class ClapTrap
 	private:
 		static const int energy = 10;
 		static const int hit = 10;
-		static const int atack = 0;
-		
+		static const int atack = 0;	
 	protected:
 		std::string 	_name;
 		int 	_points_hit;

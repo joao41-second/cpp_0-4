@@ -17,10 +17,7 @@
 
 class FragTrap : virtual public ClapTrap 
 {
-	private:
-		std::string 	_name;
-	
-	
+
 	protected:
 		static const int energy = 100;
 		static const int hit = 100;
@@ -31,7 +28,6 @@ class FragTrap : virtual public ClapTrap
 		~FragTrap();
 		FragTrap &operator = (FragTrap &other);
 		void highFivesGuys();
-		std::string get_name();
 	
 };
 

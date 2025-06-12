@@ -20,12 +20,6 @@
 
 class ScavTrap : public ClapTrap 
 {
-	private:
-		std::string 	_name;
-		int 	_points_hit;
-		int 	_points_energy;
-		int 	_points_attack;
-	
 	protected:
 		static const int energy = 50;
 		static const int hit = 100;
@@ -37,7 +31,6 @@ class ScavTrap : public ClapTrap
 		ScavTrap &operator = (ScavTrap &other);
 		void attack(std::string name);
 		void guardGate();
-		std::string get_name();
 	
 };
 

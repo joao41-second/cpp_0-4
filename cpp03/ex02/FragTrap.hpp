@@ -16,13 +16,7 @@
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap 
-{
-	private:
-		std::string 	_name;
-		int 	_points_hit;
-		int 	_points_energy;
-		int 	_points_attack;
-	
+{	
 	protected:
 		static const int energy = 100;
 		static const int hit = 100;
@@ -33,7 +27,6 @@ class FragTrap : public ClapTrap
 		~FragTrap();
 		FragTrap &operator = (FragTrap &other);
 		void highFivesGuys();
-		std::string get_name();
 	
 };
 

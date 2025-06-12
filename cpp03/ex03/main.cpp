@@ -10,14 +10,17 @@ int	main(void)
 	ScavTrap	trapB("Tom");
 	FragTrap	trapC("Paul");
 	DiamondTrap	trapD("Diamond");
-	
+
+	trapB.status();
+	trapC.status();
+	trapD.status();
 	trapD.attack("everyone!");
 	trapD.whoAmI();
 	trapD.highFivesGuys();
 	trapD.guardGate();
-	
+	trapD.status();
 	trapC.highFivesGuys();
-	trapC.attack(trapD.get_name());
+	trapD.attack(trapC.get_name());
 	
 	trapD.guardGate();
 	trapD.attack(trapC.get_name());

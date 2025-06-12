@@ -20,10 +20,7 @@
 
 class ScavTrap : virtual public ClapTrap 
 {
-	private:
-		std::string 	_name;
 
-	
 	protected:
 		static const int energy = 50;
 		static const int hit = 100;
@@ -35,7 +32,6 @@ class ScavTrap : virtual public ClapTrap
 		ScavTrap &operator = (ScavTrap &other);
 		void attack(std::string name);
 		void guardGate();
-		std::string get_name();
 	
 };
 

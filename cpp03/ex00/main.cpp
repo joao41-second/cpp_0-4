@@ -17,7 +17,7 @@ int	main(void)
 	trapA.attack(trapB.get_name());
 	trapB.takeDamage(2);
 	trapB.attack(trapA.get_name());
-
+	trapA.status();
 	trapA.takeDamage(5);
 	trapA.attack(trapB.get_name());
 	trapA.beRepaired(1);
@@ -33,11 +33,11 @@ int	main(void)
 	
 	trapB.attack(trapA.get_name());
 	trapA.takeDamage(2);
-
+	
 	trapB.attack(trapA.get_name());
 	trapA.takeDamage(2);
 	
-	trapB.beRepaired(3);
+	trapB.beRepaired(0);
 	trapB.beRepaired(3);
 	trapB.beRepaired(3);
 	trapA.beRepaired(3);

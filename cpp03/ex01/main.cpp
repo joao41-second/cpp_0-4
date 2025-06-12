@@ -1,46 +1,23 @@
 #include <iostream>
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void)
 {
 	ClapTrap	trapA("Hugo Boss");
 	ClapTrap	trapB("John Dirty");
+	ScavTrap	scrv("jota");
 
-
-	trapA.attack(trapB.get_name());
-	trapB.takeDamage(2);
-	trapB.attack(trapA.get_name());
-	trapA.takeDamage(5);
-	trapB.attack(trapA.get_name());
+	scrv.attack(trapA.get_name());
 	trapA.takeDamage(2);
+	trapA.status();
+	trapA.attack(scrv.get_name());
+	scrv.takeDamage(2);	
+	scrv.attack(trapA.get_name());
+	scrv.status();
+	scrv.guardGate();
 
-	trapA.attack(trapB.get_name());
-	trapB.takeDamage(2);
-	trapB.attack(trapA.get_name());
-
-	trapA.takeDamage(5);
-	trapA.attack(trapB.get_name());
-	trapA.beRepaired(1);
-	
-	trapB.attack(trapA.get_name());
-	trapA.takeDamage(2);
-
-	trapB.attack(trapA.get_name());
-	trapA.takeDamage(2);
-
-	trapB.attack(trapA.get_name());
-	trapA.takeDamage(2);
-	
-	trapB.attack(trapA.get_name());
-	trapA.takeDamage(2);
-
-	trapB.attack(trapA.get_name());
-	trapA.takeDamage(2);
-	
-	trapB.beRepaired(3);
-	trapB.beRepaired(3);
-	trapB.beRepaired(3);
-	trapA.beRepaired(3);
+	scrv.status();
 	return (0);
 }
 

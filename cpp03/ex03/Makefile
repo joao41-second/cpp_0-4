@@ -19,15 +19,21 @@ SRCS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	c++ $(FLAG) $(SRCS) -o $(NAME)
+%.o:%.cpp 
+	$(CC) $(FLAG) -c $< -o $@
 
-re:
-	make fclean
+all: $(NAME)
+
+ 
+
+$(NAME): $(SRCS)
+	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+
+re:fclean
 	make all
 
 clean:
-	$(SRCS)
+	rm -fr	$(SRCS)
+fclean: clean
+	rm -fr $(NAME)
 
-fclean:
-	rm $(SRCS) $(NAME)
