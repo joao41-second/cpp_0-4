@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 12:30:52 by jperpct           #+#    #+#             */
-/*   Updated: 2025/06/16 11:52:11 by jperpct          ###   ########.fr       */
+/*   Created: 2025/06/16 11:08:04 by jperpct           #+#    #+#             */
+/*   Updated: 2025/06/16 11:46:30 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  CAT_HPP
-#define CAT_HPP
 
-#include "Animal.hpp"
+#ifndef BRAIN
+#define BRAIN 
+
 #include <iostream>
 
-class Cat : public Animal
+class Brain
 {
+	private:
+		std::string _ideas[100];
 	public:
-		Cat();
-		Cat(Cat &copy);
-		~Cat();
-		Cat & operator=(Cat &var);
-		void makeSound() const ;
-
+		Brain();
+		Brain(Brain &copy);
+		~Brain();
+		Brain & operator =(Brain & copy);
+		void set_ideas(int index, std::string idea) ;
+		std::string get_ideas(int index);
 };
 
 #endif

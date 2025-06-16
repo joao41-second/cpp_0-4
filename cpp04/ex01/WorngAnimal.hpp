@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WorngAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 12:30:52 by jperpct           #+#    #+#             */
-/*   Updated: 2025/06/16 11:52:11 by jperpct          ###   ########.fr       */
+/*   Created: 2025/06/16 10:38:56 by jperpct           #+#    #+#             */
+/*   Updated: 2025/06/16 11:04:26 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  CAT_HPP
-#define CAT_HPP
 
-#include "Animal.hpp"
+#ifndef WORNGANIMAL_HPP
+#define WORNGANIMAL_HPP
 #include <iostream>
 
-class Cat : public Animal
+#include <string>
+class WorngAnimal
 {
+	protected:
+		std::string _string;
 	public:
-		Cat();
-		Cat(Cat &copy);
-		~Cat();
-		Cat & operator=(Cat &var);
-		void makeSound() const ;
-
+		WorngAnimal(std::string string);
+		WorngAnimal();
+		WorngAnimal(WorngAnimal &copy);
+		virtual ~WorngAnimal();
+		virtual WorngAnimal & operator=(WorngAnimal &var);
+		virtual std::string get_Type() const;
+		void makeSound() const;
 };
-
 #endif

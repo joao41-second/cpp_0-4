@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WorngCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 12:30:52 by jperpct           #+#    #+#             */
-/*   Updated: 2025/06/16 11:52:11 by jperpct          ###   ########.fr       */
+/*   Created: 2025/06/16 10:49:35 by jperpct           #+#    #+#             */
+/*   Updated: 2025/06/16 10:59:36 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  CAT_HPP
-#define CAT_HPP
-
-#include "Animal.hpp"
+#ifndef  WORNGCAT_HPP
+#define WORNGCAT_HPP
+#include "WorngAnimal.hpp"
 #include <iostream>
 
-class Cat : public Animal
+class WorngCat : public WorngAnimal
 {
 	public:
-		Cat();
-		Cat(Cat &copy);
-		~Cat();
-		Cat & operator=(Cat &var);
+		WorngCat();
+		WorngCat(WorngCat &copy);
+		~WorngCat();
+		WorngCat & operator=(WorngCat &var);
 		void makeSound() const ;
 
 };
