@@ -6,7 +6,7 @@
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 12:15:04 by jperpct           #+#    #+#             */
-/*   Updated: 2025/06/16 12:56:37 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/06/16 12:02:43 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Animal 
 {
 	protected:
-		std::string _string;
+		std::string type;
 	public:
 		Animal(std::string string);
 		Animal();
@@ -29,7 +29,6 @@ class Animal
 		virtual std::string get_Type() const;
 		virtual void makeSound() const = 0;
 		virtual std::string get_ideas(int index) const = 0;
-		virtual void set_ideas(int inex,std::string str) const = 0 ;
-
+		virtual void set_ideas(int inex,std::string str) const  =0;
 };
 #endif

@@ -19,15 +19,18 @@ Cat::Cat() : Animal("Catilit")
 	std::cout << "Start cat" << std::endl;
 }
 
-Cat::Cat(Cat &cat) : Animal(cat._string)
+Cat::Cat(Cat &cat) : Animal(cat.type)
 {
-	std::cout << "Copy cat" << std::endl;
+	this->_brain = new Brain(*cat._brain);
 	*this = cat;
+	std::cout << "Copy cat" << std::endl;
 }
 
 Cat & Cat::operator=(Cat &var)
 {
-	this->_string = var._string;
+
+	this->_brain = new Brain(*var._brain) ;
+	this->type = var.type;
 	return *this;
 }
 

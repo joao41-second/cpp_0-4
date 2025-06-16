@@ -19,15 +19,19 @@ Dog::Dog() : Animal("Dogilit")
 	std::cout << "Start dog" << std::endl;
 }
 
-Dog::Dog(Dog &dog) : Animal(dog._string)
+Dog::Dog(Dog &dog) : Animal(dog.type)
 {
+
+	this->_brain = new Brain(*dog._brain) ;
 	std::cout << "Copy dog" << std::endl;
 	*this = dog;
 }
 
 Dog & Dog::operator=(Dog &var)
 {
-	this->_string = var._string;
+
+	this->_brain = new Brain(*var._brain) ;
+	this->type = var.type;
 	return *this;
 }
 

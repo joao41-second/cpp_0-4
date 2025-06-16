@@ -1,12 +1,12 @@
 #include "Animal.hpp"
 #include <string>
 
-Animal::Animal(std::string string):_string(string)
+Animal::Animal(std::string string):type(string)
 {
 	std::cout << "Start Animal" << std::endl;
 }
 
-Animal::Animal():_string("NULL")
+Animal::Animal():type("")
 {
 	std::cout << "Start Animal in NULL" << std::endl;
 }
@@ -14,13 +14,13 @@ Animal::Animal():_string("NULL")
 Animal::Animal(Animal &Animal) 
 {
 	std::cout << "Copy Animal" << std::endl;
-	this->_string = Animal._string;
+	this->type = Animal.type;
 	*this = Animal;
 }
 
 Animal & Animal::operator=(Animal &var)
 {
-	this->_string = var._string;
+	this->type = var.type;
 	return *this;
 }
 
@@ -33,6 +33,7 @@ Animal::~Animal()
 
 std::string Animal::get_Type() const 
 {
-	return (this->_string);
+	return (this->type);
 }
+
 
