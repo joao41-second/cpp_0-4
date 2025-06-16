@@ -6,7 +6,7 @@
 #    By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/19 17:18:36 by jperpct           #+#    #+#              #
-#    Updated: 2025/06/16 10:57:56 by jperpct          ###   ########.fr        #
+#    Updated: 2025/06/16 11:03:45 by jperpct          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,17 +18,21 @@ SRC = ./Animal.cpp ./Cat.cpp ./Dog.cpp ./WrongAnimal.cpp ./WorngCat.cpp ./main.c
 
 SRCS = $(SRC:.cpp=.o)
 
+%.o:%.cpp 
+	$(CC) $(FLAG) -c $< -o $@
+
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	c++ $(FLAG) $(SRCS) -o $(NAME)
+ 
 
-re:
-	make fclean
+$(NAME): $(SRCS)
+	$(CC) $(FLAG) $(SRCS) -o $(NAME)
+
+re:fclean
 	make all
 
 clean:
-	rm -fr $(SRCS)
+	rm -fr	$(SRCS)
 
-fclean:
-	rm $(SRCS) $(NAME)
+fclean:clean
+	rm -fr $(NAME)
