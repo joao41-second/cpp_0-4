@@ -24,8 +24,9 @@ class Animal
 		Animal(std::string string);
 		Animal();
 		Animal(Animal &copy);
-		~Animal();
-		Animal & operator=(Animal &var);
-		std::string get_Type() const;
+		virtual ~Animal();
+		virtual Animal & operator=(Animal &var);
+		virtual std::string get_Type() const;
+		virtual void makeSound() const;
 };
 #endif

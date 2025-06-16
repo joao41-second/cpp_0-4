@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WorngCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 12:32:10 by jperpct           #+#    #+#             */
-/*   Updated: 2025/05/23 12:44:37 by jperpct          ###   ########.fr       */
+/*   Created: 2025/06/16 10:49:35 by jperpct           #+#    #+#             */
+/*   Updated: 2025/06/16 10:59:36 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  DOG_HPP
-#define DOG_HPP
-#include "Animal.hpp"
+#ifndef  WORNGCAT_HPP
+#define WORNGCAT_HPP
+#include "WorngAnimal.hpp"
 #include <iostream>
 
-class Dog : public Animal
+class WorngCat : public WorngAnimal
 {
 	public:
-		Dog();
-		Dog(Dog &copy);
-		~Dog();
-		Dog & operator=(Dog &var);
-		void makeSound();
+		WorngCat();
+		WorngCat(WorngCat &copy);
+		~WorngCat();
+		WorngCat & operator=(WorngCat &var);
+		void makeSound() const ;
 
 };
 

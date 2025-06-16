@@ -13,7 +13,7 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Catilit")
+Cat::Cat() : Animal("Catilit") 
 {
 	std::cout << "Start cat" << std::endl;
 }
@@ -30,7 +30,7 @@ Cat & Cat::operator=(Cat &var)
 	return *this;
 }
 
-void Cat::makeSound()
+void Cat::makeSound() const 
 {
 	std::cout << "miao miao" << std::endl;
 }

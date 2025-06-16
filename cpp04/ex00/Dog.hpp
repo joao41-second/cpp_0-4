@@ -22,7 +22,7 @@ class Dog : public Animal
 		Dog(Dog &copy);
 		~Dog();
 		Dog & operator=(Dog &var);
-		void makeSound();
+		void makeSound() const ;
 
 };
 

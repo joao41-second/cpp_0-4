@@ -31,7 +31,12 @@ Animal::~Animal()
 }
 
 
-std::string Animal::get_Type() const
+std::string Animal::get_Type() const 
 {
 	return (this->_string);
+}
+
+void Animal::makeSound() const
+{
+	std::cout  << "animal not set " << std::endl;
 }

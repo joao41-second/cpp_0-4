@@ -6,7 +6,7 @@
 #    By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/19 17:18:36 by jperpct           #+#    #+#              #
-#    Updated: 2025/05/23 14:07:01 by jperpct          ###   ########.fr        #
+#    Updated: 2025/06/16 10:57:56 by jperpct          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = cpp00_ex0
 
 CC = c++
 FLAG =  -Wall -Wextra -Werror -std=c++98
-SRC = ./Animal.cpp ./Cat.cpp ./Dog.cpp ./main.cpp
+SRC = ./Animal.cpp ./Cat.cpp ./Dog.cpp ./WrongAnimal.cpp ./WorngCat.cpp ./main.cpp 
+
 SRCS = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -27,7 +28,7 @@ re:
 	make all
 
 clean:
-	$(SRCS)
+	rm -fr $(SRCS)
 
 fclean:
 	rm $(SRCS) $(NAME)

@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WorngCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jperpct <jperpect@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/23 12:20:57 by jperpct           #+#    #+#             */
-/*   Updated: 2025/05/23 12:44:40 by jperpct          ###   ########.fr       */
+/*   Created: 2025/06/16 10:54:23 by jperpct           #+#    #+#             */
+/*   Updated: 2025/06/16 10:56:42 by jperpct          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
+#include "WorngAnimal.hpp"
+#include "WorngCat.hpp"
 
-Dog::Dog() : Animal("Dogilit")
+WorngCat::WorngCat() : WorngAnimal("WorngCatilit") 
 {
-	std::cout << "Start dog" << std::endl;
+	std::cout << "Start cat" << std::endl;
 }
 
-Dog::Dog(Dog &dog) : Animal(dog._string)
+WorngCat::WorngCat(WorngCat &cat) : WorngAnimal(cat._string)
 {
-	std::cout << "Copy dog" << std::endl;
-	*this = dog;
+	std::cout << "Copy cat" << std::endl;
+	*this = cat;
 }
 
-Dog & Dog::operator=(Dog &var)
+WorngCat & WorngCat::operator=(WorngCat &var)
 {
 	this->_string = var._string;
 	return *this;
 }
 
-void Dog::makeSound()
+void WorngCat::makeSound() const 
 {
-	std::cout << "aoaoaoaoaoaoa" << std::endl;
+	std::cout << "miao miao" << std::endl;
 }
 
-Dog::~Dog()
+WorngCat::~WorngCat()
 {
-	std::cout << "end dog" << std::endl;
+	std::cout << "end cat" << std::endl;
 }
 

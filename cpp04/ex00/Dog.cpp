@@ -30,7 +30,7 @@ Dog & Dog::operator=(Dog &var)
 	return *this;
 }
 
-void Dog::makeSound()
+void Dog::makeSound() const 
 {
 	std::cout << "aoaoaoaoaoaoa" << std::endl;
 }
