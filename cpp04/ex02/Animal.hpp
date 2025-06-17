@@ -16,8 +16,12 @@
 #include <iostream>
 
 #include <string>
+
+#include "Brain.hpp"
 class Animal 
 {
+	private:
+		Brain *_brain;	
 	protected:
 		std::string type;
 	public:
@@ -28,7 +32,8 @@ class Animal
 		virtual Animal & operator=(Animal &var);
 		virtual std::string get_Type() const;
 		virtual void makeSound() const = 0;
-		virtual std::string get_ideas(int index) const = 0;
-		virtual void set_ideas(int inex,std::string str) const  =0;
+		virtual std::string get_ideas(int index) const;
+		virtual void set_ideas(int inex,std::string str) const ;
+
 };
 #endif

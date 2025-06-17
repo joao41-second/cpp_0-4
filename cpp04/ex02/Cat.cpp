@@ -15,13 +15,11 @@
 
 Cat::Cat() : Animal("Catilit") 
 {
-	 _brain = new Brain();
 	std::cout << "Start cat" << std::endl;
 }
 
 Cat::Cat(Cat &cat) : Animal(cat.type)
 {
-	this->_brain = new Brain(*cat._brain);
 	*this = cat;
 	std::cout << "Copy cat" << std::endl;
 }
@@ -29,7 +27,6 @@ Cat::Cat(Cat &cat) : Animal(cat.type)
 Cat & Cat::operator=(Cat &var)
 {
 
-	this->_brain = new Brain(*var._brain) ;
 	this->type = var.type;
 	return *this;
 }
@@ -41,19 +38,6 @@ void Cat::makeSound() const
 
 Cat::~Cat()
 {
-	delete _brain;
 	std::cout << "end cat" << std::endl;
-}
-
-
-void Cat::set_ideas(int index, std::string str) const
-{
-	_brain->set_ideas(index,str);
-}
-
-
-std::string Cat::get_ideas(int index) const
-{
-	return(_brain->get_ideas(index));
 }
 

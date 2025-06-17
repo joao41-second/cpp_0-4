@@ -19,16 +19,13 @@
 
 class Cat : public Animal
 {
-	private:
-		  Brain *_brain;	
+
 	public:
 		Cat();
 		Cat(Cat &copy);
 		~Cat();
 		Cat & operator=(Cat &var);
 		void makeSound() const ;
-		void set_ideas(int idex,std::string str) const;
-		std::string get_ideas(int idex) const;
 
 };
 

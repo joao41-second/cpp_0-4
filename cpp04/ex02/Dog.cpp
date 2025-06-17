@@ -15,14 +15,12 @@
 
 Dog::Dog() : Animal("Dogilit")
 {
-	 _brain = new Brain();
 	std::cout << "Start dog" << std::endl;
 }
 
 Dog::Dog(Dog &dog) : Animal(dog.type)
 {
 
-	this->_brain = new Brain(*dog._brain) ;
 	std::cout << "Copy dog" << std::endl;
 	*this = dog;
 }
@@ -30,7 +28,6 @@ Dog::Dog(Dog &dog) : Animal(dog.type)
 Dog & Dog::operator=(Dog &var)
 {
 
-	this->_brain = new Brain(*var._brain) ;
 	this->type = var.type;
 	return *this;
 }
@@ -43,18 +40,6 @@ void Dog::makeSound() const
 Dog::~Dog()
 {
 
-	delete _brain;
 	std::cout << "end dog" << std::endl;
 }
 
-
-void Dog::set_ideas(int index, std::string str) const
-{
-	_brain->set_ideas(index,str);
-}
-
-
-std::string Dog::get_ideas(int index) const
-{
-	return(_brain->get_ideas(index));
-}

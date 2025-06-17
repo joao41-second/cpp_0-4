@@ -22,7 +22,7 @@
 
 int main()
 {
-//	const Animal * meta = new Animal();
+	//const Animal * meta = new Animal();
 	const Animal * j = new Dog();
 	const Animal * i = new Cat();
 
@@ -30,21 +30,23 @@ int main()
 	
 	std::cout << j->get_Type() << " "<< std::endl;
 	std::cout << i->get_Type() << "  "<<  std::endl;
-//	std::cout << meta->get_Type() << " "<<  std::endl;
+	//std::cout << meta->get_Type() << " "<<  std::endl;
 
 	j->makeSound();
 	i->makeSound();
-//	meta->makeSound(); 
+	//meta->makeSound(); 
 	//er->makeSound();
 
 
 	i->set_ideas(5,"ola miao");
+	
 
-	std::cout << "idea " << i->get_ideas(5) << std::endl;
+	//std::cout << " Animal" << meta->get_ideas(5) << std::endl;
+	std::cout << " cat " << i->get_ideas(5) << std::endl;
 
 
 //	delete er;
-//	delete meta;
+	//delete meta;
 	delete j;
 	delete i;
 
